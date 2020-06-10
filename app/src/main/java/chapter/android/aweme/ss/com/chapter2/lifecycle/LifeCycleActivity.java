@@ -30,11 +30,14 @@ public class LifeCycleActivity extends AppCompatActivity {
 
 
     private TextView mLifecycleDisplay;
+    private static String log = "";
 
 
     private void logAndAppend(String lifecycleEvent) {
         Log.d(TAG, "Lifecycle Event: " + lifecycleEvent);
-        mLifecycleDisplay.append(lifecycleEvent + "\n");
+//        mLifecycleDisplay.append(lifecycleEvent + "\n");
+        log += lifecycleEvent +'\n';
+        mLifecycleDisplay.setText(log);
     }
 
     public void resetLifecycleDisplay(View view) {
